@@ -1,3 +1,4 @@
+from config.setting import BASE_URL, TIMEOUT
 from playwright.sync_api import sync_playwright
 
 
@@ -11,12 +12,11 @@ def test_open():
 
         page = browser.new_page()
 
-        page.goto("https://automationexercise.com")
+        page.goto(BASE_URL)
+        page.wait_for_load_state("domcontentloaded", timeout=TIMEOUT)
 
         assert "Automation Exercise" in page.title()
 
         page.screenshot(path="screenshots/homepage.png")
-
-        page.wait_for_timeout(3000)
 
         browser.close()

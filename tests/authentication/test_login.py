@@ -1,33 +1,29 @@
 import pytest
 
-from pages.login_page import LoginPage
-from utils.data_reader import load_json
-
-users = load_json("data/users.json")["users"]
+from pages.authentication.login_page import LoginPage
+from utils.user_manager import load_users
 
 
-@pytest.mark.parametrize("user", users)
-def test_login(page, user):
+def test_login(page):
+    users = load_users()["users"]
 
-    login = LoginPage(page)
+    for user in users:
+        login = LoginPage(page)
 
-    login.open()
+        login.open()
 
-    login.login(
-        user["email"],
-        user["password"]
-    )
+        login_success = login.login(
+            user["email"],
+            user["password"]
+        )
 
-    if user["expected"] == "success":
+        assert login_success is not None
 
-        assert login.is_login_success()
-
-        login.screenshot("login_success")
-
-        login.logout()
-
-    else:
-
-        assert login.is_login_failed()
-
-        login.screenshot("login_failed")
+        if user["expected"] == "success":
+            assert login_success
+            login.screenshot("login_success")
+            login.logout()
+            assert login.is_logout_success()
+        else:
+            assert not login_success
+            login.screenshot("login_failed")

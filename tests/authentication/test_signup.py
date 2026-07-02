@@ -1,4 +1,4 @@
-from pages.signup_page import SignupPage
+from pages.authentication.signup_page import SignupPage
 
 
 def test_signup(page):

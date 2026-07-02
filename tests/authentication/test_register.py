@@ -1,11 +1,14 @@
-from pages.signup_page import SignupPage
-from pages.account_page import AccountPage
+from config.setting import REGISTER_DATA_FILE, USERS_FILE
+from pages.authentication.signup_page import SignupPage
+from pages.authentication.account_page import AccountPage
+
 from utils.data_reader import load_json
+from utils.user_manager import save_login_user
 
 
 def test_register(page):
 
-    user = load_json("data/register_data.json")
+    user = load_json(REGISTER_DATA_FILE)
 
     account_data = user["account"]
     address_data = user["address"]
@@ -63,10 +66,17 @@ def test_register(page):
 
     account.screenshot("04_logged_in")
 
-    account.delete_account()
+    save_login_user(
+        email=registered_user["email"],
+        password=account_data["password"]
+    )
 
-    page.wait_for_load_state("domcontentloaded")
+    print(f"Login data saved to {USERS_FILE}")
 
-    assert account.is_account_deleted()
+    # account.delete_account()
 
-    account.screenshot("05_account_deleted")
+    # page.wait_for_load_state("domcontentloaded")
+
+    # assert account.is_account_deleted()
+
+    # account.screenshot("05_account_deleted")

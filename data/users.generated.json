@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "email": "juan.testing.f10ca43f@gmail.com",
+            "password": "Binus123!",
+            "expected": "success"
+        },
+        {
+            "email": "juan.testing.f10ca43f@gmail.com",
+            "password": "PasswordSalah",
+            "expected": "failed"
+        }
+    ]
+}

@@ -1,12 +1,12 @@
 {
     "users": [
         {
-            "email": "juan.testing1720@gmail.com",
+            "email": "juan.testing.43fbe916@gmail.com",
             "password": "Binus123!",
             "expected": "success"
         },
         {
-            "email": "juan.testing1720@gmail.com",
+            "email": "juan.testing.43fbe916@gmail.com",
             "password": "PasswordSalah",
             "expected": "failed"
         }

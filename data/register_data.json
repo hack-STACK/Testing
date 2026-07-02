@@ -1,0 +1,27 @@
+{
+    "account": {
+        "title": "Mr",
+        "password": "Binus123!",
+        "day": "10",
+        "month": "5",
+        "year": "2004"
+    },
+
+    "address": {
+        "first_name": "Juan",
+        "last_name": "Testing",
+        "company": "BINUS",
+
+        "address1": "Jl. Soekarno Hatta",
+        "address2": "Malang",
+
+        "country": "India",
+
+        "state": "East Java",
+        "city": "Malang",
+
+        "zipcode": "65141",
+
+        "mobile": "081234567890"
+    }
+}

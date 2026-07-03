@@ -1,29 +1,59 @@
 import pytest
 
+from config.setting import REGISTER_DATA_FILE
 from pages.authentication.login_page import LoginPage
-from utils.user_manager import load_users
+from pages.authentication.signup_page import SignupPage
+from pages.authentication.account_page import AccountPage
+from utils.data_reader import load_json
+from utils.test_user import generate_user
 
 
 def test_login(page):
-    users = load_users()["users"]
+    user = generate_user()
 
-    for user in users:
-        login = LoginPage(page)
+    account_data = load_json(REGISTER_DATA_FILE)["account"]
+    address_data = load_json(REGISTER_DATA_FILE)["address"]
 
-        login.open()
+    signup = SignupPage(page)
+    account = AccountPage(page)
+    login = LoginPage(page)
 
-        login_success = login.login(
-            user["email"],
-            user["password"]
-        )
+    # Create account (prerequisite for login test)
+    signup.open()
+    signup.click_signup_login()
+    assert signup.is_signup_visible()
 
-        assert login_success is not None
+    signup.signup(user["name"], user["email"])
+    page.wait_for_load_state("domcontentloaded")
 
-        if user["expected"] == "success":
-            assert login_success
-            login.screenshot("login_success")
-            login.logout()
-            assert login.is_logout_success()
-        else:
-            assert not login_success
-            login.screenshot("login_failed")
+    assert account.is_account_information_visible()
+
+    account.select_title(account_data["title"])
+    account.enter_password(account_data["password"])
+    account.select_date_of_birth(
+        account_data["day"],
+        account_data["month"],
+        account_data["year"]
+    )
+
+    account.subscribe_newsletter()
+    account.subscribe_special_offers()
+    account.fill_address(address_data)
+    account.create_account()
+
+    page.wait_for_load_state("domcontentloaded")
+    assert account.is_account_created()
+
+    account.continue_account()
+    page.wait_for_load_state("domcontentloaded")
+    assert account.is_logged_in()
+
+    # Logout to reach login page (prerequisite for login test)
+    login.logout()
+
+    # Test login scenario
+    login.open()
+    login_success = login.login(user["email"], user["password"])
+
+    assert login_success
+    login.screenshot("authentication/login_success")

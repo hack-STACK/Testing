@@ -1,7 +1,5 @@
 from uuid import uuid4
 
-from playwright.sync_api import TimeoutError
-
 from config.setting import BASE_URL, TIMEOUT
 from utils.base_page import BasePage
 
@@ -43,15 +41,7 @@ class SignupPage(BasePage):
     # =====================================================
 
     def is_signup_visible(self):
-        try:
-            self.page.wait_for_selector(
-                self.SIGNUP_TITLE,
-                state="visible",
-                timeout=TIMEOUT
-            )
-            return True
-        except TimeoutError:
-            return False
+        return self.is_visible(self.SIGNUP_TITLE)
 
     # =====================================================
 
@@ -81,15 +71,5 @@ class SignupPage(BasePage):
             "email": email
         }
 
-    # =====================================================
-
     def is_account_information_visible(self):
-        try:
-            self.page.wait_for_selector(
-                self.ACCOUNT_INFORMATION,
-                state="visible",
-                timeout=TIMEOUT
-            )
-            return True
-        except TimeoutError:
-            return False
+        return self.is_visible(self.ACCOUNT_INFORMATION)

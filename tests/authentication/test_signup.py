@@ -17,4 +17,4 @@ def test_signup(page):
 
     assert signup.is_account_information_visible()
 
-    signup.screenshot("signup")
+    signup.screenshot("authentication/signup")

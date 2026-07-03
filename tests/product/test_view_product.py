@@ -12,17 +12,17 @@ def test_view_products(page):
 
     assert product.is_products_page_visible()
 
-    product.screenshot("01_products_page")
+    product.screenshot("product/01_products_page")
 
     assert product.is_product_list_visible()
 
-    product.screenshot("02_product_list")
+    product.screenshot("product/02_product_list")
 
     product.view_first_product()
 
     assert product.is_product_detail_visible()
 
-    product.screenshot("03_product_detail")
+    product.screenshot("product/03_product_detail")
 
     assert product.get_product_name() != ""
 
@@ -36,4 +36,4 @@ def test_view_products(page):
 
     assert "Brand" in product.get_brand()
 
-    product.screenshot("04_product_information")
+    product.screenshot("product/04_product_information")

@@ -18,7 +18,7 @@ def test_view_cart(page):
 
     assert product.is_products_page_visible()
 
-    product.screenshot("01_products_page")
+    product.screenshot("cart/01_products_page")
 
     # ==========================
     # Add Product To Cart
@@ -30,7 +30,7 @@ def test_view_cart(page):
 
     assert product.is_cart_popup_visible()
 
-    product.screenshot("02_cart_popup")
+    product.screenshot("cart/02_cart_popup")
 
     # ==========================
     # Open Cart
@@ -40,7 +40,7 @@ def test_view_cart(page):
 
     assert cart.is_cart_visible()
 
-    cart.screenshot("03_cart_page")
+    cart.screenshot("cart/03_cart_page")
 
     # ==========================
     # Verify Product
@@ -53,4 +53,4 @@ def test_view_cart(page):
     print("Qty     :", cart.get_product_quantity())
     print("Total   :", cart.get_product_total())
 
-    cart.screenshot("04_product_in_cart")
+    cart.screenshot("cart/04_product_in_cart")

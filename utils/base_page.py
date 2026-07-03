@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from config.setting import TIMEOUT
 from playwright.sync_api import TimeoutError
 
@@ -44,4 +46,6 @@ class BasePage:
         return locator.text_content()
 
     def screenshot(self, name):
-        self.page.screenshot(path=f"screenshots/{name}.png")
+        path = Path("screenshots") / f"{name}.png"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        self.page.screenshot(path=str(path))

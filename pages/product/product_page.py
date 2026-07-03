@@ -107,6 +107,16 @@ class ProductPage(BasePage):
             timeout=TIMEOUT
         )
 
+    def add_product(self, index):
+        """Add product at the specified index to cart."""
+        product = self.page.locator(self.PRODUCT_CARD).nth(index)
+        product.hover()
+        product.locator(self.ADD_TO_CART_BUTTON).click()
+        self.page.locator(self.CART_MODAL).wait_for(
+            state="visible",
+            timeout=TIMEOUT
+        )
+
     def continue_shopping(self):
         self.click(self.CONTINUE_SHOPPING_BUTTON)
 

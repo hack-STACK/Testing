@@ -1,17 +1,17 @@
-from config.setting import REGISTER_DATA_FILE, USERS_FILE
+from config.setting import REGISTER_DATA_FILE
 from pages.authentication.signup_page import SignupPage
 from pages.authentication.account_page import AccountPage
 
 from utils.data_reader import load_json
-from utils.user_manager import save_login_user
+from utils.test_user import generate_user
 
 
 def test_register(page):
 
-    user = load_json(REGISTER_DATA_FILE)
+    user = generate_user()
 
-    account_data = user["account"]
-    address_data = user["address"]
+    account_data = load_json(REGISTER_DATA_FILE)["account"]
+    address_data = load_json(REGISTER_DATA_FILE)["address"]
 
     signup = SignupPage(page)
     account = AccountPage(page)
@@ -22,7 +22,7 @@ def test_register(page):
 
     assert signup.is_signup_visible()
 
-    registered_user = signup.signup("Juan Testing")
+    registered_user = signup.signup(user["name"], user["email"])
 
     print(f"Registered User : {registered_user['email']}")
 
@@ -30,7 +30,7 @@ def test_register(page):
 
     assert account.is_account_information_visible()
 
-    account.screenshot("01_account_information")
+    account.screenshot("authentication/01_account_information")
 
     account.select_title(account_data["title"])
 
@@ -48,7 +48,7 @@ def test_register(page):
 
     account.fill_address(address_data)
 
-    account.screenshot("02_filled_form")
+    account.screenshot("authentication/02_filled_form")
 
     account.create_account()
 
@@ -56,7 +56,7 @@ def test_register(page):
 
     assert account.is_account_created()
 
-    account.screenshot("03_account_created")
+    account.screenshot("authentication/03_account_created")
 
     account.continue_account()
 
@@ -64,14 +64,7 @@ def test_register(page):
 
     assert account.is_logged_in()
 
-    account.screenshot("04_logged_in")
-
-    save_login_user(
-        email=registered_user["email"],
-        password=account_data["password"]
-    )
-
-    print(f"Login data saved to {USERS_FILE}")
+    account.screenshot("authentication/04_logged_in")
 
     # account.delete_account()
 

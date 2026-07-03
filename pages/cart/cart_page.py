@@ -78,25 +78,42 @@ class CartPage(BasePage):
     # Product Information
     # ============================================================
 
-    def get_product_name(self):
+    def get_product_name(self, index=0):
         return self.page.locator(
             self.PRODUCT_NAME
-        ).first.text_content()
+        ).nth(index).text_content()
 
-    def get_product_price(self):
+    def get_product_price(self, index=0):
         return self.page.locator(
             self.PRODUCT_PRICE
-        ).first.text_content()
+        ).nth(index).text_content()
 
-    def get_product_quantity(self):
+    def get_product_quantity(self, index=0):
         return self.page.locator(
             self.PRODUCT_QUANTITY
-        ).first.text_content()
+        ).nth(index).text_content()
 
     def get_total_products(self):
         return self.page.locator(self.CART_ROWS).count()
     
-    def get_product_total(self):
+    def get_product_total(self, index=0):
         return self.page.locator(
-        self.PRODUCT_TOTAL
-    ).first.text_content()
+            self.PRODUCT_TOTAL
+        ).nth(index).text_content()
+
+    def get_total_product_rows(self):
+        """Return the total number of product rows in cart."""
+        return self.page.locator(self.CART_ROWS).count()
+
+    def get_all_product_names(self):
+        """Return a list of all product names in cart."""
+        product_names = self.page.locator(self.PRODUCT_NAME).all()
+        return [name.text_content() for name in product_names]
+
+    def verify_product_count(self, expected_count):
+        """Verify the exact number of products in cart."""
+        actual_count = self.get_total_product_rows()
+        assert actual_count == expected_count, (
+            f"Expected {expected_count} products in cart, "
+            f"but found {actual_count}"
+        )

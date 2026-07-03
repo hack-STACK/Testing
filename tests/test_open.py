@@ -17,6 +17,6 @@ def test_open():
 
         assert "Automation Exercise" in page.title()
 
-        page.screenshot(path="screenshots/homepage.png")
+        page.screenshot(path="screenshots/smoke/homepage.png")
 
         browser.close()

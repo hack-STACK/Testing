@@ -36,7 +36,7 @@ def test_remove_product(page):
 
     assert cart.is_cart_visible()
 
-    cart.screenshot("01_before_delete")
+    cart.screenshot("cart/01_before_delete")
 
     # ============================================
     # Delete Product
@@ -50,4 +50,4 @@ def test_remove_product(page):
 
     assert cart.is_cart_empty()
 
-    cart.screenshot("02_after_delete")
+    cart.screenshot("cart/02_after_delete")

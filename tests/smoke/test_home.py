@@ -8,4 +8,4 @@ def test_home(page):
 
     assert "Automation Exercise" in page.title()
 
-    page.screenshot(path="screenshots/home.png")
+    page.screenshot(path="screenshots/smoke/home.png")

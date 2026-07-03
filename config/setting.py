@@ -12,8 +12,6 @@ HEADLESS = False
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
-RUNTIME_DIR = BASE_DIR / "runtime"
 
 USERS_FILE = DATA_DIR / "users.json"
 REGISTER_DATA_FILE = DATA_DIR / "register_data.json"
-RUNTIME_USER_FILE = RUNTIME_DIR / "latest_user.json"

@@ -1,0 +1,63 @@
+name: Playwright Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: playwright-tests
+      cancel-in-progress: true
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12']
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+      
+      - name: Install Playwright browsers
+        run: playwright install --with-deps
+      
+      - name: Run pytest
+        env:
+          HEADLESS: 'true'
+        run: pytest -v --tb=short
+      
+      - name: Upload test reports and artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            reports/
+            artifacts/
+          if-no-files-found: warn
+          retention-days: 30

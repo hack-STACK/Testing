@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 BASE_URL = "https://automationexercise.com"
@@ -8,7 +9,7 @@ CART_URL = f"{BASE_URL}/view_cart"
 TIMEOUT = 10000
 
 BROWSER = "msedge"
-HEADLESS = False
+HEADLESS = os.getenv('HEADLESS', 'false').lower() == 'true'
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"

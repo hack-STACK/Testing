@@ -1,397 +1,265 @@
-# QA Automation Testing Framework
+# Web Automation Testing Framework
 
-A modern, scalable test automation framework built with **Playwright**, **Pytest**, and the **Page Object Model** pattern. This project demonstrates best practices in automated testing for e-commerce applications.
+This project was created for the **Automation Testing** course at **BINUS University**.
 
-## 📋 Project Overview
-
-This is a comprehensive QA automation testing framework designed for the Automation Exercise e-commerce platform. The framework implements industry-standard testing patterns and provides a solid foundation for scaling test automation across multiple modules.
-
-**Framework Highlights:**
-- ✅ 16 passing tests covering authentication, product, and cart workflows
-- ✅ Page Object Model (POM) architecture for maintainability
-- ✅ Atomic test actions with clear separation of concerns
-- ✅ Runtime data separation (static vs. dynamic data)
-- ✅ Screenshot management with nested directory support
-- ✅ HTML reporting with Pytest plugins
-- ✅ Video recording for failed test debugging
+The goal of this project is to automate web testing using **Python**, **Pytest**, and **Playwright**. The framework uses the **Page Object Model (POM)** to keep the code organized and easier to maintain.
 
 ---
 
-## ✨ Features
+# Features
 
-### 🔐 Authentication Module
-- User registration with account creation
-- Email-based login with success/failure verification
-- User logout and session management
-- Account deletion workflow
-- Dynamic email generation for test isolation
+This framework can automate several test scenarios, including:
 
-### 📦 Product Module
-- View product listings and details
-- Search products by keyword
-- Add products to cart with visual confirmation
-- Multi-product browsing and cart workflows
+- User Registration
+- User Login
+- User Logout
+- Delete Account
+- View Products
+- Search Products
+- Add Product to Cart
+- Remove Product from Cart
+- Continue Shopping
+- View Cart
+- Verify Cart Information
+- Proceed to Checkout
 
-### 🛒 Cart Module
-- View and manage shopping cart
-- Remove products from cart
-- Multi-product cart operations
-- Cart data verification (price, quantity, total calculations)
-- Proceed to checkout
-- Continue shopping between product additions
+After every test execution, the framework also generates reports automatically.
 
 ---
 
-## 🛠️ Tech Stack
+# Technologies Used
 
-| Component | Technology | Version |
-|-----------|-----------|---------|
-| **Browser Automation** | Playwright (Sync API) | 1.61.0 |
-| **Test Framework** | Pytest | 9.1.1 |
-| **Language** | Python | 3.14.6 |
-| **Test Reporting** | Pytest HTML | 4.2.0 |
-| **Reporting Enhancement** | Pytest Sugar | 1.1.1 |
-| **Assertion Help** | Pytest Clarity | 1.0.1 |
-| **Browser** | Microsoft Edge | Latest |
+- Python
+- Pytest
+- Playwright
+- OpenPyXL
+- pytest-html
+- GitHub Actions
 
 ---
 
-## 📁 Folder Structure
+# Project Structure
 
-```
+```text
 TestingProject/
-├── pages/                      # Page Object Model implementations
-│   ├── authentication/         # Login, signup, account management
-│   │   ├── login_page.py
-│   │   ├── signup_page.py
-│   │   └── account_page.py
-│   ├── product/                # Product browsing and search
-│   │   └── product_page.py
-│   ├── cart/                   # Shopping cart operations
-│   │   └── cart_page.py
-│   └── checkout/               # Checkout process
-│       └── checkout_page.py
 │
-├── tests/                      # Test suites organized by feature
-│   ├── authentication/         # Auth workflow tests (5 tests)
-│   │   ├── test_register.py
-│   │   ├── test_login.py
-│   │   ├── test_logout.py
-│   │   ├── test_delete_account.py
-│   │   └── test_signup.py
-│   ├── product/                # Product feature tests (3 tests)
-│   │   ├── test_add_to_cart.py
-│   │   ├── test_search_product.py
-│   │   └── test_view_product.py
-│   ├── cart/                   # Cart feature tests (6 tests)
-│   │   ├── test_view_cart.py
-│   │   ├── test_remove_product.py
-│   │   ├── test_continue_shopping.py
-│   │   ├── test_multiple_products.py
-│   │   ├── test_verify_cart_information.py
-│   │   └── test_proceed_to_checkout.py
-│   └── smoke/                  # Smoke test (1 test)
-│       └── test_home.py
-│
-├── utils/                      # Shared utilities
-│   ├── base_page.py            # BasePage with common actions
-│   ├── user_manager.py         # Test user credential management
-│   └── data_reader.py          # JSON data file helpers
-│
-├── config/                     # Configuration management
-│   └── setting.py              # Centralized settings (URLs, timeouts)
-│
-├── data/                       # Static test data (fixtures)
-│   ├── users.json              # Pre-configured user credentials
-│   ├── register_data.json      # Account creation test data
-│   └── product_data.json       # Product search test data
-│
-├── runtime/                    # Runtime data (created during test execution)
-│   └── latest_user.json        # Dynamically generated user credentials
-│
-├── screenshots/                # Test screenshots (auto-generated)
-│   └── failed/                 # Failed test screenshots
-│
-├── videos/                     # Test execution videos (Playwright recordings)
-│
-├── reports/                    # HTML test reports
-│   ├── report.html
-│   └── authentication_report.html
-│
-├── conftest.py                 # Pytest configuration and fixtures
-├── pytest.ini                  # Pytest settings
-├── requirements.txt            # Python dependencies
-└── README.md                   # This file
+├── config/
+├── data/
+├── docs/
+├── pages/
+├── tests/
+├── utils/
+├── reports/
+├── artifacts/
+├── logs/
+├── run.py
+└── README.md
 ```
 
 ---
 
-## 🚀 Installation
+# Installation
 
-### Prerequisites
-- Python 3.10 or higher
-- Microsoft Edge browser (or Chromium)
-- Git
+Clone this repository.
 
-### Setup Steps
-
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd TestingProject
-   ```
-
-2. **Create virtual environment:**
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # macOS/Linux
-   # or
-   .venv\Scripts\activate     # Windows
-   ```
-
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Install Playwright browsers:**
-   ```bash
-   playwright install
-   ```
-
----
-
-## 🧪 Running Tests
-
-### Run All Tests
 ```bash
-pytest -v
+git clone <repository-url>
 ```
 
-### Run Tests by Category
+Go to the project folder.
+
 ```bash
-# Authentication tests only
-pytest tests/authentication/ -v
-
-# Product tests only
-pytest tests/product/ -v
-
-# Cart tests only
-pytest tests/cart/ -v
-
-# Smoke tests only
-pytest tests/smoke/ -v
+cd TestingProject
 ```
 
-### Run Specific Test
+Create a virtual environment.
+
 ```bash
-pytest tests/authentication/test_login.py -v
+python -m venv .venv
 ```
 
-### Run with Markers
+Activate the environment.
+
+### macOS / Linux
+
 ```bash
-pytest -m authentication -v
-pytest -m cart -v
-pytest -m product -v
+source .venv/bin/activate
 ```
 
-### Run in Headless Mode
+### Windows
+
 ```bash
-HEADLESS=True pytest -v
+.venv\Scripts\activate
 ```
 
-### Run with Custom Timeout
+Install all dependencies.
+
 ```bash
-# Tests use TIMEOUT=10000ms by default (configured in config/setting.py)
-pytest -v
+pip install -r requirements.txt
 ```
 
----
+Install Playwright browsers.
 
-## 📊 Generating HTML Reports
-
-### Full Test Report
 ```bash
-pytest --html=reports/report.html --self-contained-html
+playwright install
 ```
 
-### Authentication-only Report
+---
+
+# Running the Tests
+
+Run all tests.
+
 ```bash
-pytest tests/authentication/ --html=reports/authentication_report.html --self-contained-html
+pytest
 ```
 
-### View Reports
-Open the generated HTML file in a browser:
+Run tests from one folder.
+
 ```bash
-open reports/report.html  # macOS
-start reports/report.html # Windows
+pytest tests/authentication
 ```
 
-**Report Features:**
-- Test execution summary
-- Pass/fail breakdown
-- Test duration tracking
-- Screenshots for failed tests
-- Video recordings embedded
+Run a single test.
 
----
-
-## 🏗️ Project Architecture
-
-### Page Object Model (POM)
-The framework uses the Page Object Model pattern for maintainability and reusability:
-
-```
-BasePage (utils/base_page.py)
-  ├── LoginPage
-  ├── SignupPage
-  ├── AccountPage
-  ├── ProductPage
-  ├── CartPage
-  └── CheckoutPage
+```bash
+pytest tests/product/test_add_to_cart.py
 ```
 
-**BasePage provides atomic actions:**
-- `is_visible(selector)` - Check element visibility with timeout
-- `visit(url)` - Navigate to URL with DOM content load wait
-- `click(selector)` - Click element after visibility check
-- `fill(selector, text)` - Fill input field with text
-- `text(selector)` - Get element text content
-- `screenshot(name)` - Capture screenshot with nested directory support
+Or run the project using:
 
-### Data Management
-- **Static Data:** `data/` folder contains JSON fixtures (users, products, account info)
-- **Runtime Data:** `runtime/` folder stores dynamically created user credentials
-- **Test Isolation:** Each test run creates fresh credentials in `runtime/latest_user.json`
-
-### Test Execution Order
-Authentication tests run in enforced sequential order to simulate real user workflows:
-1. `test_register.py` - Create account
-2. `test_login.py` - Login with account
-3. `test_logout.py` - Logout
-4. `test_delete_account.py` - Delete account
-5. `test_signup.py` - Alternative signup flow
-
----
-
-## 📸 Screenshot Examples
-
-Screenshots are automatically captured during test execution:
-
-```
-screenshots/
-├── authentication/
-│   ├── 01_account_information.png
-│   ├── 02_filled_form.png
-│   ├── 03_account_created.png
-│   └── login_success.png
-├── cart/
-│   ├── 01_products_page.png
-│   ├── 02_cart_popup.png
-│   ├── 03_cart_page.png
-│   └── 07_checkout_page.png
-├── product/
-│   ├── 01_products_page.png
-│   ├── 02_search_result.png
-│   └── 03_product_detail.png
-└── failed/
-    └── [screenshots of failed tests]
+```bash
+python run.py
 ```
 
-**Automatic nested directories:** Test code can use `screenshot("authentication/login_success")` and directories are created automatically.
+---
+
+# Reports
+
+After the tests finish, the framework automatically creates several reports.
+
+### Reports Folder
+
+```text
+reports/
+```
+
+Generated reports:
+
+- report.html
+- dashboard.html
+- TestReport.xlsx
+- Summary.xlsx
+- BugReport.xlsx (only if there are failed tests)
+
+### Artifacts Folder
+
+```text
+artifacts/
+```
+
+This folder stores:
+
+- Screenshots
+- Test videos
+- Execution artifacts
 
 ---
 
-## 🔮 Future Improvements
+# Dashboard
 
-### Testing Enhancements
-- [ ] Add API testing layer for backend validation
-- [ ] Implement visual regression testing
-- [ ] Add performance testing and metrics
-- [ ] Create cross-browser test matrix (Chrome, Firefox, Safari)
+The dashboard shows a quick summary of the latest test execution.
 
-### Framework Enhancements
-- [ ] Add test data builders for complex scenarios
-- [ ] Implement custom logging and test diagnostics
-- [ ] Add failure analysis and reporting dashboard
-- [ ] Create test execution history tracking
+Information available:
 
-### CI/CD Integration
-- [ ] GitHub Actions workflow for automated test runs
-- [ ] Parallel test execution configuration
-- [ ] Slack notifications for test results
-- [ ] Test result trending and analytics
+- Total Tests
+- Passed Tests
+- Failed Tests
+- Skipped Tests
+- Pass Rate
+- Execution Time
+- Execution History
+- Report Links
+
+If a test fails, the dashboard also provides a screenshot and video for that failed test.
 
 ---
 
-## 📝 Test Statistics
+# GitHub Actions
 
-| Category | Count | Status |
-|----------|-------|--------|
-| Authentication Tests | 5 | ✅ Passing |
-| Product Tests | 3 | ✅ Passing |
-| Cart Tests | 6 | ✅ Passing |
-| Smoke Tests | 1 | ✅ Passing |
-| **Total Tests** | **16** | **✅ All Passing** |
+This project supports GitHub Actions.
 
-**Average Execution Time:** ~2.5 minutes for full suite
+Whenever code is pushed or a pull request is created, the workflow can automatically run the test suite.
 
----
+Workflow location:
 
-## 🤝 Contributing
-
-When adding new tests:
-
-1. Create test file in appropriate `tests/` subdirectory
-2. Use existing page objects from `pages/`
-3. Create new page objects if needed (inherit from BasePage)
-4. Follow atomic action pattern (one action per method)
-5. Use pytest markers (@pytest.mark.authentication, etc.)
-6. Add descriptive assertions with meaningful messages
-7. Run `pytest -v` to verify no regressions
+```text
+.github/workflows/test.yml
+```
 
 ---
 
-## 📚 Key Concepts
+# Framework Workflow
 
-### Atomic Actions
-Each page object method performs a single, well-defined action:
-- ❌ Bad: `def complete_registration()` (multiple actions)
-- ✅ Good: `def enter_password()`, `def select_title()`, `def create_account()`
-
-### Test Independence
-- Tests use dynamically generated credentials (UUID-based emails)
-- Runtime data stored in `runtime/` folder
-- No test data pollution between runs
-
-### Wait Strategy
-- All interactions include explicit waits (timeout=10000ms)
-- Uses Playwright's built-in timeout handling
-- Avoids race conditions and flaky tests
-
----
-
-## 👨‍💻 Author
-
-Created as a university QA Automation project demonstrating modern testing best practices.
-
----
-
-## 📄 License
-
-This project is provided for educational purposes.
+```text
+Run Test
+    │
+    ▼
+Pytest
+    │
+    ▼
+Playwright
+    │
+    ▼
+Page Object Model
+    │
+    ▼
+Execute Test
+    │
+    ▼
+Generate Reports
+    │
+    ▼
+Dashboard & History
+    │
+    ▼
+Artifacts
+```
 
 ---
 
-## 📞 Support
+# What I Learned
 
-For questions or issues:
-1. Check existing test examples in `tests/` folder
-2. Review page object implementations in `pages/`
-3. Consult `config/setting.py` for configuration options
+During this project, I learned how to:
+
+- Build a test automation framework
+- Apply the Page Object Model (POM)
+- Organize automation tests using Pytest
+- Generate HTML and Excel reports
+- Capture screenshots and videos automatically
+- Create a simple dashboard for test results
+- Use GitHub Actions for automated testing
 
 ---
 
-**Last Updated:** 2026-07-03  
-**Framework Version:** 1.0  
-**Test Status:** ✅ All 16 tests passing
+# Future Improvements
+
+Some features that can still be added are:
+
+- Allure Report
+- Docker support
+- Parallel test execution
+- Email notifications
+- More cross-browser testing
+
+---
+
+# Author
+
+**Juan**
+
+BINUS University
+
+Automation Testing Course
+
+Semester 2

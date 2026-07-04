@@ -1,0 +1,732 @@
+[
+  {
+    "run_id": "EXE_20260704_131152_ad12cffb",
+    "timestamp": "2026-07-04T13:12:03.468773",
+    "duration": 11.11,
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": null,
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null
+  },
+  {
+    "run_id": "EXE_20260704_131215_947c93a9",
+    "timestamp": "2026-07-04T13:12:20.559920",
+    "duration": 4.59,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": null,
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null
+  },
+  {
+    "run_id": "EXE_20260704_131231_5d6c2901",
+    "timestamp": "2026-07-04T13:12:37.691601",
+    "duration": 6.18,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": null,
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null
+  },
+  {
+    "run_id": "EXE_20260704_131255_1d1998ba",
+    "timestamp": "2026-07-04T13:13:09.682209",
+    "duration": 13.92,
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": null,
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null
+  },
+  {
+    "run_id": "EXE_20260704_131641_968cd894",
+    "timestamp": "2026-07-04T13:16:48.425488",
+    "duration": 6.59,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": null,
+      "playwright_version": null,
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_131709_e28401b4",
+    "timestamp": "2026-07-04T13:17:15.317454",
+    "duration": 5.4,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_131725_edfa5d01",
+    "timestamp": "2026-07-04T13:17:36.891504",
+    "duration": 11.19,
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_131752_214de7ce",
+    "timestamp": "2026-07-04T13:18:08.316907",
+    "duration": 16.02,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_131824_6a0e8407",
+    "timestamp": "2026-07-04T13:18:37.027815",
+    "duration": 12.89,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_132213_0558a922",
+    "timestamp": "2026-07-04T13:22:26.522877",
+    "duration": 13.25,
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_132235_aec9638c",
+    "timestamp": "2026-07-04T13:22:47.252306",
+    "duration": 11.98,
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_132252_fa54af1d",
+    "timestamp": "2026-07-04T13:23:15.348991",
+    "duration": 23.23,
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_132328_2907bbdc",
+    "timestamp": "2026-07-04T13:24:02.198867",
+    "duration": 33.56,
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_132420_60c6f0fb",
+    "timestamp": "2026-07-04T13:24:42.330183",
+    "duration": 21.34,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_133324_c8339e83",
+    "timestamp": "2026-07-04T13:33:30.712277",
+    "duration": 6.47,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": true,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_133623_9e6ca151",
+    "timestamp": "2026-07-04T13:36:34.373501",
+    "duration": 11.09,
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_133646_aedbbd24",
+    "timestamp": "2026-07-04T13:37:01.676713",
+    "duration": 15.58,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_141137_7103f4b7",
+    "timestamp": "2026-07-04T14:11:44.384810",
+    "duration": 6.7,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_141730_5bde977d",
+    "timestamp": "2026-07-04T14:17:52.194676",
+    "duration": 21.36,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_141813_8846d616",
+    "timestamp": "2026-07-04T14:18:23.141550",
+    "duration": 9.31,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_141846_59735a92",
+    "timestamp": "2026-07-04T14:18:50.966523",
+    "duration": 4.44,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_142738_8f9281a1",
+    "timestamp": "2026-07-04T14:27:53.190575",
+    "duration": 14.26,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_143341_9e529fe8",
+    "timestamp": "2026-07-04T14:33:52.595986",
+    "duration": 10.7,
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0,
+    "pass_rate": 0.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": "reports/BugReport.xlsx",
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": [
+      {
+        "nodeid": "tests/authentication/test_login.py::test_login",
+        "test_name": "test_login",
+        "screenshot": "artifacts/screenshots/fail/20260704_143351_test_login.png",
+        "video": "artifacts/videos/authentication/20260704_143351_test_login.webm"
+      }
+    ]
+  },
+  {
+    "run_id": "EXE_20260704_143609_8222a547",
+    "timestamp": "2026-07-04T14:36:20.159819",
+    "duration": 10.62,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_144054_827d4095",
+    "timestamp": "2026-07-04T14:41:01.638370",
+    "duration": 7.17,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_144102_6b479a6e",
+    "timestamp": "2026-07-04T14:41:07.719462",
+    "duration": 5.46,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_144216_01e9c4ca",
+    "timestamp": "2026-07-04T14:42:22.084118",
+    "duration": 5.84,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": 100.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": null,
+    "environment": {
+      "python_version": "3.14.6",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": false,
+      "operating_system": "darwin",
+      "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64"
+    },
+    "git": {
+      "branch": "main",
+      "commit": "5d12c56"
+    },
+    "failed_tests": []
+  }
+]

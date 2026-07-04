@@ -728,5 +728,131 @@
       "commit": "5d12c56"
     },
     "failed_tests": []
+  },
+  {
+    "run_id": "EXE_20260704_080604_ac137122",
+    "timestamp": "2026-07-04T08:06:18.955426",
+    "duration": 14.65,
+    "total": 16,
+    "passed": 0,
+    "failed": 16,
+    "skipped": 0,
+    "pass_rate": 0.0,
+    "html_report": "reports/report.html",
+    "excel_report": "reports/TestReport.xlsx",
+    "summary_report": "reports/Summary.xlsx",
+    "bug_report": "reports/BugReport.xlsx",
+    "environment": {
+      "python_version": "3.12.3",
+      "pytest_version": "9.1.1",
+      "playwright_version": "1.61.0",
+      "browser": "msedge",
+      "headless": true,
+      "operating_system": "linux",
+      "platform": "Linux-6.17.0-1018-azure-x86_64-with-glibc2.39",
+      "architecture": "x86_64"
+    },
+    "git": {
+      "branch": "copilot/fix-github-actions-compatibility",
+      "commit": "88ab035"
+    },
+    "failed_tests": [
+      {
+        "nodeid": "tests/authentication/test_delete_account.py::test_delete_account",
+        "test_name": "test_delete_account",
+        "screenshot": "artifacts/screenshots/fail/20260704_080606_test_delete_account.png",
+        "video": "artifacts/videos/authentication/20260704_080606_test_delete_account.webm"
+      },
+      {
+        "nodeid": "tests/authentication/test_login.py::test_login",
+        "test_name": "test_login",
+        "screenshot": "artifacts/screenshots/fail/20260704_080607_test_login.png",
+        "video": "artifacts/videos/authentication/20260704_080607_test_login.webm"
+      },
+      {
+        "nodeid": "tests/authentication/test_logout.py::test_logout",
+        "test_name": "test_logout",
+        "screenshot": "artifacts/screenshots/fail/20260704_080608_test_logout.png",
+        "video": "artifacts/videos/authentication/20260704_080608_test_logout.webm"
+      },
+      {
+        "nodeid": "tests/authentication/test_register.py::test_register",
+        "test_name": "test_register",
+        "screenshot": "artifacts/screenshots/fail/20260704_080609_test_register.png",
+        "video": "artifacts/videos/authentication/20260704_080609_test_register.webm"
+      },
+      {
+        "nodeid": "tests/authentication/test_signup.py::test_signup",
+        "test_name": "test_signup",
+        "screenshot": "artifacts/screenshots/fail/20260704_080610_test_signup.png",
+        "video": "artifacts/videos/authentication/20260704_080610_test_signup.webm"
+      },
+      {
+        "nodeid": "tests/cart/test_continue_shopping.py::test_continue_shopping",
+        "test_name": "test_continue_shopping",
+        "screenshot": "artifacts/screenshots/fail/20260704_080610_test_continue_shopping.png",
+        "video": "artifacts/videos/cart/20260704_080610_test_continue_shopping.webm"
+      },
+      {
+        "nodeid": "tests/cart/test_multiple_products.py::test_multiple_products",
+        "test_name": "test_multiple_products",
+        "screenshot": "artifacts/screenshots/fail/20260704_080611_test_multiple_products.png",
+        "video": "artifacts/videos/cart/20260704_080611_test_multiple_products.webm"
+      },
+      {
+        "nodeid": "tests/cart/test_proceed_to_checkout.py::test_proceed_to_checkout",
+        "test_name": "test_proceed_to_checkout",
+        "screenshot": "artifacts/screenshots/fail/20260704_080612_test_proceed_to_checkout.png",
+        "video": "artifacts/videos/cart/20260704_080612_test_proceed_to_checkout.webm"
+      },
+      {
+        "nodeid": "tests/cart/test_remove_product.py::test_remove_product",
+        "test_name": "test_remove_product",
+        "screenshot": "artifacts/screenshots/fail/20260704_080613_test_remove_product.png",
+        "video": "artifacts/videos/cart/20260704_080613_test_remove_product.webm"
+      },
+      {
+        "nodeid": "tests/cart/test_verify_cart_information.py::test_verify_cart_information",
+        "test_name": "test_verify_cart_information",
+        "screenshot": "artifacts/screenshots/fail/20260704_080614_test_verify_cart_information.png",
+        "video": "artifacts/videos/cart/20260704_080614_test_verify_cart_information.webm"
+      },
+      {
+        "nodeid": "tests/cart/test_view_cart.py::test_view_cart",
+        "test_name": "test_view_cart",
+        "screenshot": "artifacts/screenshots/fail/20260704_080614_test_view_cart.png",
+        "video": "artifacts/videos/cart/20260704_080614_test_view_cart.webm"
+      },
+      {
+        "nodeid": "tests/product/test_add_to_cart.py::test_add_to_cart",
+        "test_name": "test_add_to_cart",
+        "screenshot": "artifacts/screenshots/fail/20260704_080615_test_add_to_cart.png",
+        "video": "artifacts/videos/product/20260704_080615_test_add_to_cart.webm"
+      },
+      {
+        "nodeid": "tests/product/test_search_product.py::test_search_product",
+        "test_name": "test_search_product",
+        "screenshot": "artifacts/screenshots/fail/20260704_080616_test_search_product.png",
+        "video": "artifacts/videos/product/20260704_080616_test_search_product.webm"
+      },
+      {
+        "nodeid": "tests/product/test_view_product.py::test_view_products",
+        "test_name": "test_view_products",
+        "screenshot": "artifacts/screenshots/fail/20260704_080617_test_view_products.png",
+        "video": "artifacts/videos/product/20260704_080617_test_view_products.webm"
+      },
+      {
+        "nodeid": "tests/smoke/test_home.py::test_home",
+        "test_name": "test_home",
+        "screenshot": "artifacts/screenshots/fail/20260704_080618_test_home.png",
+        "video": "artifacts/videos/smoke/20260704_080618_test_home.webm"
+      },
+      {
+        "nodeid": "tests/test_open.py::test_open",
+        "test_name": "test_open",
+        "screenshot": null,
+        "video": null
+      }
+    ]
   }
 ]

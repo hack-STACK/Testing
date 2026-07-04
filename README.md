@@ -1,14 +1,16 @@
 # Web Automation Testing Framework
 
-This project was created for the **Automation Testing** course at **BINUS University**.
+This project was developed as the final project for the **Testing and System Implementation (ISYS6338003)** course at **BINUS University**.
 
-The goal of this project is to automate web testing using **Python**, **Pytest**, and **Playwright**. The framework uses the **Page Object Model (POM)** to keep the code organized and easier to maintain.
+The purpose of this project is to build an automation testing framework that can execute functional web testing using **Python**, **Pytest**, and **Playwright**. The framework follows the **Page Object Model (POM)** design pattern to keep the project organized, reusable, and easier to maintain.
+
+Besides automating browser interactions, the framework also generates detailed reports, stores execution artifacts, maintains execution history, and supports Continuous Integration using GitHub Actions.
 
 ---
 
 # Features
 
-This framework can automate several test scenarios, including:
+The framework automates several user scenarios, including:
 
 - User Registration
 - User Login
@@ -23,7 +25,7 @@ This framework can automate several test scenarios, including:
 - Verify Cart Information
 - Proceed to Checkout
 
-After every test execution, the framework also generates reports automatically.
+After every execution, the framework automatically generates reports and stores testing artifacts.
 
 ---
 
@@ -43,18 +45,35 @@ After every test execution, the framework also generates reports automatically.
 ```text
 TestingProject/
 │
-├── config/
-├── data/
-├── docs/
-├── pages/
-├── tests/
-├── utils/
-├── reports/
+├── .github/
+│   └── workflows/
+│       └── test.yml
+│
 ├── artifacts/
+│
+├── config/
+│
+├── data/
+│
+├── docs/
+│
 ├── logs/
+│
+├── pages/
+│
+├── reports/
+│
+├── tests/
+│
+├── utils/
+│
+├── requirements.txt
+├── pytest.ini
 ├── run.py
 └── README.md
 ```
+
+Each folder has its own responsibility, making the project easier to understand and maintain.
 
 ---
 
@@ -92,7 +111,7 @@ source .venv/bin/activate
 .venv\Scripts\activate
 ```
 
-Install all dependencies.
+Install the project dependencies.
 
 ```bash
 pip install -r requirements.txt
@@ -108,25 +127,25 @@ playwright install
 
 # Running the Tests
 
-Run all tests.
+Run all test cases.
 
 ```bash
 pytest
 ```
 
-Run tests from one folder.
+Run tests inside a specific folder.
 
 ```bash
 pytest tests/authentication
 ```
 
-Run a single test.
+Run a specific test file.
 
 ```bash
 pytest tests/product/test_add_to_cart.py
 ```
 
-Or run the project using:
+Or simply execute:
 
 ```bash
 python run.py
@@ -136,23 +155,25 @@ python run.py
 
 # Reports
 
-After the tests finish, the framework automatically creates several reports.
+After every execution, the framework automatically generates several reports.
 
-### Reports Folder
+### Reports
 
 ```text
 reports/
 ```
 
-Generated reports:
+Generated reports include:
 
 - report.html
 - dashboard.html
 - TestReport.xlsx
 - Summary.xlsx
-- BugReport.xlsx (only if there are failed tests)
+- BugReport.xlsx *(generated only when failed test cases exist)*
 
-### Artifacts Folder
+---
+
+### Artifacts
 
 ```text
 artifacts/
@@ -161,16 +182,18 @@ artifacts/
 This folder stores:
 
 - Screenshots
-- Test videos
-- Execution artifacts
+- Video recordings
+- Other execution artifacts
+
+These files are useful for debugging failed test cases.
 
 ---
 
 # Dashboard
 
-The dashboard shows a quick summary of the latest test execution.
+The custom dashboard provides a quick overview of the latest test execution.
 
-Information available:
+The dashboard displays:
 
 - Total Tests
 - Passed Tests
@@ -181,15 +204,21 @@ Information available:
 - Execution History
 - Report Links
 
-If a test fails, the dashboard also provides a screenshot and video for that failed test.
+If a test case fails, the dashboard also provides direct access to screenshots and recorded videos.
 
 ---
 
 # GitHub Actions
 
-This project supports GitHub Actions.
+This project supports Continuous Integration using GitHub Actions.
 
-Whenever code is pushed or a pull request is created, the workflow can automatically run the test suite.
+Whenever code is pushed or a Pull Request is created, GitHub Actions can automatically:
+
+- Install project dependencies
+- Install Playwright browsers
+- Execute automated tests
+- Generate reports
+- Upload artifacts
 
 Workflow location:
 
@@ -202,64 +231,101 @@ Workflow location:
 # Framework Workflow
 
 ```text
-Run Test
-    │
-    ▼
-Pytest
-    │
-    ▼
-Playwright
-    │
-    ▼
-Page Object Model
-    │
-    ▼
-Execute Test
-    │
-    ▼
+Start
+   │
+   ▼
+Run Pytest
+   │
+   ▼
+Launch Playwright
+   │
+   ▼
+Execute Test Cases
+   │
+   ▼
 Generate Reports
-    │
-    ▼
-Dashboard & History
-    │
-    ▼
-Artifacts
+   │
+   ▼
+Generate Dashboard
+   │
+   ▼
+Save Artifacts
+   │
+   ▼
+Update History
+   │
+   ▼
+Finish
 ```
 
 ---
 
 # What I Learned
 
-During this project, I learned how to:
+Through this project, I learned how to:
 
-- Build a test automation framework
-- Apply the Page Object Model (POM)
-- Organize automation tests using Pytest
-- Generate HTML and Excel reports
-- Capture screenshots and videos automatically
-- Create a simple dashboard for test results
-- Use GitHub Actions for automated testing
+- Build a web automation testing framework from scratch.
+- Apply the Page Object Model (POM).
+- Organize test cases using Pytest.
+- Generate HTML and Excel reports automatically.
+- Capture screenshots and videos for debugging.
+- Build a simple dashboard to summarize test results.
+- Integrate GitHub Actions for Continuous Integration.
+- Improve debugging and project maintenance using modular utilities.
 
 ---
 
 # Future Improvements
 
-Some features that can still be added are:
+Some features that can still be added include:
 
-- Allure Report
+- Allure Report integration
 - Docker support
 - Parallel test execution
 - Email notifications
-- More cross-browser testing
+- Cross-browser testing improvements
+- API automation testing
+
+---
+
+# AI Assistance
+
+This project was developed under a tight academic deadline. To improve productivity and speed up development, AI tools such as **GitHub Copilot** and **ChatGPT** were used as coding assistants during the development process.
+
+AI was mainly used to:
+
+- Generate initial code suggestions.
+- Explain programming concepts.
+- Assist with debugging ideas.
+- Improve documentation.
+- Review code structure and readability.
+
+However, the overall framework architecture, project structure, implementation, debugging, testing, report generation, dashboard development, GitHub Actions integration, and final validation were completed, reviewed, and verified by the project author.
+
+Every AI-generated suggestion was manually evaluated, modified when necessary, and tested before being included in the final project.
+
+---
+
+# Repository
+
+GitHub Repository:
+
+https://github.com/hack-STACK/Testing
 
 ---
 
 # Author
 
-**Juan**
+**Muhammad Najwan Hibatullah (Juan)**
+
+Student ID: **2902616684**
+
+Bachelor of Information Systems
 
 BINUS University
 
-Testing and System Implementation
+Course: **Testing and System Implementation (ISYS6338003)**
 
 Semester 2
+
+2025/2026

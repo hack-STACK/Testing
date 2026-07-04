@@ -260,6 +260,6 @@ Some features that can still be added are:
 
 BINUS University
 
-Automation Testing Course
+Testing and System Implementation
 
 Semester 2

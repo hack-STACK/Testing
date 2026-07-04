@@ -66,6 +66,11 @@ def organize_video(test_path, test_name):
             pass
 
 
+def skip_if_cloudflare_challenge(page, is_github_actions):
+    if is_github_actions and "One moment" in page.title():
+        pytest.skip("Cloudflare challenge on GitHub Actions")
+
+
 @pytest.fixture
 def page(request):
 
@@ -87,6 +92,14 @@ def page(request):
         )
 
         page = context.new_page()
+        original_goto = page.goto
+
+        def goto_with_cloudflare_check(*args, **kwargs):
+            response = original_goto(*args, **kwargs)
+            skip_if_cloudflare_challenge(page, is_github_actions)
+            return response
+
+        page.goto = goto_with_cloudflare_check
 
         yield page
 
